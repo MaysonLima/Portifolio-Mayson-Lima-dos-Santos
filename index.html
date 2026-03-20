@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Mayson Lima | Portifólio </title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav class="navegação">
+    <nav class="navegacao">
         <ul class="menu">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contatos">Contato</a></li>
+            <li><a href="#inicio" class="menu_link">Início</a></li>
+            <li><a href="#sobre" class="menu_link">Sobre</a></li>
+            <li><a href="#projetos" class="menu_link">Projetos</a></li>
+            <li><a href="#contatos" class="menu_link">Contato</a></li>
         </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
 
-        <div> <img src="img/199ae020-bb93-4b64-945f-cd9da8ce53f8.png" alt="Foto de Mayson Lima dos Santos" class="foto_perfil"> </div>
+        <img src="img/199ae020-bb93-4b64-945f-cd9da8ce53f8.png" alt="Foto de Mayson Lima dos Santos"
+            class="foto_perfil"> </div>
         <h1>Mayson Lima dos Santos</h1>
-        <p>Desenvolvedor FullStack em formação</p>
-        
-        </div>
+        <p class="cabecalho_subtitulo">Desenvolvedor FullStack em formação</p>
+    </main>
 
-        <section id="sobre" class="sobre"> 
-            <h2 id="sobre_titulo">Sobre Mim</h2>
+
+        <section id="sobre" class="sobre">
+            <h2 id="sobre_titulo" class="sobre_titulo">Sobre Mim</h2>
             <div class="sobre_caixa">
-                <p class="sobre_paragrafo">Olá! Sou Mayson Lima dos Santos, um entusiasta da tecnologia e apaixonado por desenvolvimento de software. Atualmente, estou me dedicando a aprimorar minhas habilidades como Desenvolvedor FullStack, explorando tanto o front-end quanto o back-end para criar soluções inovadoras e eficientes. Com uma abordagem focada em aprendizado contínuo, estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente. Meu objetivo é contribuir para projetos que façam a diferença e impactem positivamente a vida das pessoas.</p>
+                <p class="sobre_paragrafo">Olá! Sou Mayson Lima dos Santos, um entusiasta da tecnologia e apaixonado por
+                    desenvolvimento de software. Atualmente, estou me dedicando a aprimorar minhas habilidades como
+                    Desenvolvedor FullStack, explorando tanto o front-end quanto o back-end para criar soluções
+                    inovadoras e eficientes. Com uma abordagem focada em aprendizado contínuo, estou sempre em busca de
+                    novos desafios e oportunidades para crescer profissionalmente. Meu objetivo é contribuir para
+                    projetos que façam a diferença e impactem positivamente a vida das pessoas.</p>
             </div>
 
         </section>
 
         <section id="projetos" class="projetos">
-            <h2>Meus Projetos</h2>
-        <div class="projetos_caixa">
-            <div class="projetos_card">
-                <img src="#" alt="">
-                <h3>Teste 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-
+            <h2 class="projetos_titulo">Meus Projetos</h2>
             <div class="projetos_caixa">
-            <div class="projetos_card">
-                <img src="#" alt="">
-                <h3>Teste 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="projetos_card">
+                    <img src="img/image.png" alt="Projeto 1" class="projetos_imagem">
+                    <div class="caixa_textos_projeto">
+                        <h3 class="info_projetos">Teste 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="projetos_card">
+                    <img src="img/image.png" alt="Projeto 2" class="projetos_imagem">
+                    <div class="caixa_textos_projeto">
+                        <h3 class="info_projetos">Teste 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="projetos_card">
+                    <img src="img/image.png" alt="Projeto 3" class="projetos_imagem">
+                    <div class="caixa_textos_projeto">
+                        <h3 class="info_projetos">Teste 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="projetos_caixa">
-
-            <div class="projetos_card">
-                <img src="#" alt="">
-                <h3>Teste 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
         </section>
 
         <section class="contatos" id="contatos">
@@ -67,15 +76,12 @@
                 <div class="grupo_form">
                     <textarea placeholder="Digite sua mensagem aqui..." class="text_form"></textarea>
                 </div>
-                <div
-                ><button type="submit">Enviar</button>
-            </div>
+                <div><button type="submit">Enviar</button>
+                </div>
 
             </form>
 
         </section>
-
-        
-    </main>
 </body>
+
 </html>
