@@ -120,6 +120,28 @@ h1{
 
 }
 
+.ver_mais{
+    text-decoration: none;
+}
+
+.ver_mais_botao{
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: var(--light);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 2rem auto 0;
+
+}
+
+.ver_mais_link{
+    text-decoration: none;
+    color: var(--light);
+}
+
 .projetos{
     padding: 6rem 2rem;
 
@@ -268,6 +290,7 @@ footer{
 
 .img_contato{
     text-decoration: none;
+    color: white;
 }
 
 @media (max-width: 768px){
