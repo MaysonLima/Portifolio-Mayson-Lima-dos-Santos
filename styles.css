@@ -65,21 +65,21 @@ body{
 .cabecalho{
     min-height: 100vh;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    padding-top: 100px
 }
 
 .nome_mayson{
     color: var(--primary);
-    border-right: 2px solid var(--primary);
+    border-right: 3px solid var(--primary);
     padding-right: 5px;
     white-space: nowrap;
-    font-size: 3rem;
 
     animation: piscar 1s infinite;
 }
-
 
 .titulo_introducao{
     font-size: 2rem;
@@ -89,7 +89,6 @@ body{
 .titulo_introducao_2{
     font-size: 1.5rem;
     color: var(--light);
-
 }
 
 .foto_perfil{
@@ -305,13 +304,17 @@ h1{
 
 
 @keyframes escrever{
-    from { width: 0 }
-    to { width: 12.40ch }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes piscar{
     50%{
-        border-color: transparent;
+        border-right-color: transparent;
     }
 }
 
