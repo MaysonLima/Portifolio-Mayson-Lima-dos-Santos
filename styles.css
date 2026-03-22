@@ -30,6 +30,7 @@ body{
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
+    border-radius: 30px;
 }
 
 .menu{
@@ -67,17 +68,42 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    min-height: 100vh;
+    padding: 2rem;
+}
 
-    padding-top: 100px
+/* imagem */
+.hero-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* texto */
+.hero-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .nome_mayson{
-    color: var(--primary);
-    border-right: 3px solid var(--primary);
+    border-right: 4px solid var(--light);
     padding-right: 5px;
     white-space: nowrap;
-
+    display: inline-block;
+    min-width: 200px;
+    font-size: 4rem;
+    color: var(--primary);
+    text-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
     animation: piscar 1s infinite;
 }
 
@@ -89,6 +115,7 @@ body{
 .titulo_introducao_2{
     font-size: 1.5rem;
     color: var(--light);
+    white-space: nowrap;
 }
 
 .foto_perfil{
@@ -343,5 +370,15 @@ footer{
 
     .cabecalho_subtitulo{
         font-size: 1.2rem;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-texto{
+        text-align: center;
     }
 }

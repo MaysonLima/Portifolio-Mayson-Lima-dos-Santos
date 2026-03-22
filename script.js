@@ -16,7 +16,7 @@ window.open(url, '_blank');
 
 }
 
-const texto = "MAYSON LIMA"
+const texto = "</MAYSON LIMA>"
 const elemento = document.querySelector(".nome_mayson")
 
 let index = 0
@@ -25,7 +25,7 @@ function digitar(){
     if(index < texto.length){
         elemento.textContent += texto.charAt(index)
         index++
-        setTimeout(digitar, 150) // velocidade
+        setTimeout(digitar, 200) // velocidade
     }
 }
 
