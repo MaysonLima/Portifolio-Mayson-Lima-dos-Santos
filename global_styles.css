@@ -605,9 +605,13 @@ footer{
 .tech-track{
     display: flex;
     gap: 2rem;
-    width: max-content;
+    display: flex;
+    gap: 2rem;
+    white-space: nowrap;
     padding: 1.5rem;
     transition: transform 0.1s linear;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
 
 .tech-track.lento{
