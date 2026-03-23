@@ -76,7 +76,8 @@ setTimeout(() => {
     animate();
 }, 100);
 
-tsParticles.load("particles-js", {
+window.addEventListener("load", () => {
+    tsParticles.load("particles-js", {
   background: {
     color: {
       value: "transparent"
@@ -84,21 +85,21 @@ tsParticles.load("particles-js", {
   },
   particles: {
     number: {
-      value: 60
+      value: 90
     },
     color: {
-      value: "#4f46e5"
+      value: "#441f80"
     },
     links: {
       enable: true,
-      color: "#4f46e5",
+      color: "#441f80",
       distance: 150,
       opacity: 0.4,
       width: 1
     },
     move: {
       enable: true,
-      speed: 2
+      speed: 1.5
     },
     size: {
       value: 3
@@ -120,4 +121,4 @@ tsParticles.load("particles-js", {
       }
     }
   }
-});
+})});
