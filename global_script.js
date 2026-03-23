@@ -78,8 +78,18 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Ajusta número de partículas para mobile
-let numParticles = window.innerWidth < 768 ? 30 : 60;
+let numParticles;
+function getNumParticles() {
+    if(window.innerWidth < 480){
+        return 10; // mobile pequeno
+    } else if(window.innerWidth < 768){
+        return 20; // mobile médio
+    } else {
+        return 60; // desktop
+    }
+}
+
+numParticles = getNumParticles();
 let particles = [];
 
 let mouse = { x: null, y: null };
@@ -111,13 +121,14 @@ class Particle {
     }
 
     draw(){
-        ctx.fillStyle = "rgba(70, 107, 229, 0)";
+        ctx.fillStyle = "rgba(78, 70, 229, 0)";
         ctx.beginPath();
         ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
         ctx.fill();
     }
 }
 
+// Inicializa partículas
 for(let i = 0; i < numParticles; i++){
     particles.push(new Particle());
 }
@@ -129,8 +140,8 @@ function connectParticles(){
             let dy = particles[a].y - particles[b].y;
             let distance = dx * dx + dy * dy;
 
-            if(distance < 19000){
-                ctx.strokeStyle = "rgba(43, 35, 184, 0.74)";
+            if(distance < 17000){
+                ctx.strokeStyle = "rgba(78, 70, 229, 0.42)";
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particles[a].x, particles[a].y);
@@ -145,7 +156,7 @@ function connectParticles(){
             let distance = dx * dx + dy * dy;
 
             if(distance < 20000){
-                ctx.strokeStyle = "rgba(43, 35, 184, 0.74)";
+                ctx.strokeStyle = "rgba(78, 70, 229, 0.21)";
                 ctx.beginPath();
                 ctx.moveTo(particles[a].x, particles[a].y);
                 ctx.lineTo(mouse.x, mouse.y);
@@ -174,8 +185,9 @@ window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Ajusta número de partículas ao mudar tamanho da tela
-    const newNum = window.innerWidth < 768 ? 60 : 180;
+    // Ajusta número de partículas
+    const newNum = getNumParticles();
+
     if(newNum > particles.length){
         for (let i = particles.length; i < newNum; i++){
             particles.push(new Particle());
