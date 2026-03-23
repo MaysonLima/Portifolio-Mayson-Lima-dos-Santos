@@ -21,7 +21,9 @@ html{
 body{
     background: var(--dark);
     color: var(--light);
+     overflow-x: hidden;
 }
+
 
 .navegacao{
     position: fixed;
@@ -71,29 +73,7 @@ body{
     text-align: center;
     padding: 2rem;
 }
-.hero{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    min-height: 100vh;
-    padding: 2rem;
-}
 
-/* imagem */
-.hero-img{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-/* texto */
-.hero-texto{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
 
 .nome_mayson{
     border-right: 4px solid var(--light);
@@ -118,15 +98,6 @@ body{
     white-space: nowrap;
 }
 
-.foto_perfil{
-    width: 300px;
-    height: 300px;
-    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
-    border-radius: 50%;
-    border: 4px solid var(--glass);
-    animation: flutuar 5s ease-in-out infinite;
-}
-
 h1{
     font-size: 3.5rem;
     font-weight: bold;
@@ -134,38 +105,48 @@ h1{
     margin: 20px;
 }
 
-.cabecalho_subtitulo{
-    font-size: 1.5rem;
-    color: var(--light);
-}
-
 .sobre{
-    padding: 6rem 2rem;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
 }
 
-#sobre_titulo{
-    font-size: 3rem;
-    color: var(--light);
-    text-align: center;
-    margin-bottom: 20px;
 
-}
 
-.sobre_caixa{
-    padding: 2rem;
-    max-width: 800px;
+.sobre_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
     margin: 0 auto;
-    border-radius: 16px;
-    border: 1px solid var(--glass);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.05) ;
-
+    width: 100%;
 }
 
-.sobre_paragrafo{
-    text-align: center;
-    font-size: 1.2rem;
 
+.sobre_imagem{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.foto_sobre{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+}
+
+.sobre_texto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--light);
+    border: 1px solid var(--glass);
+    outline: none;
 }
 
 .ver_mais{
@@ -358,27 +339,125 @@ footer{
     color: white;
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 768px){
+
     .navegacao{
-        display: none;
-        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .menu{
+        gap: 1.5rem;
+        flex-wrap: wrap;
     }
 
     h1{
+        font-size: 2.2rem;
+    }
+
+    .titulo_introducao{
+        font-size: 1.3rem;
+    }
+
+    .titulo_introducao_2{
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .nome_mayson{
         font-size: 2.5rem;
+        min-width: auto;
     }
 
-    .cabecalho_subtitulo{
-        font-size: 1.2rem;
+    .cabecalho{
+        padding: 1.5rem;
     }
 
-    .hero{
+    .sobre{
+        padding: 3rem 1rem;
+         min-height: calc(100vh - 80px);
+    }
+
+    .sobre_container{
         flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
 
-    .hero-texto{
-        text-align: center;
+    .foto_sobre{
+        width: 180px;
+        height: 180px;
+    }
+
+    .sobre_texto{
+        padding: 1rem;
+    }
+
+    .projetos{
+        padding: 3rem 1rem;
+    }
+
+    .projetos_caixa{
+        grid-template-columns: 1fr;
+    }
+
+    .formulario_contato{
+        padding: 1.5rem;
+    }
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 769px) and (max-width: 1024px){
+
+    .menu{
+        gap: 2rem;
+    }
+
+    h1{
+        font-size: 2.8rem;
+    }
+
+    .nome_mayson{
+        font-size: 3rem;
+    }
+
+    .sobre_container{
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .foto_sobre{
+        width: 220px;
+        height: 220px;
+    }
+
+    .projetos_caixa{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== TELAS GRANDES / TV ===== */
+@media (min-width: 1400px){
+
+    .cabecalho{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .sobre_container{
+        max-width: 1200px;
+    }
+
+    .projetos_caixa{
+        max-width: 1400px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    .nome_mayson{
+        font-size: 4.5rem;
     }
 }
