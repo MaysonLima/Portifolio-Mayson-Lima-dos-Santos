@@ -75,3 +75,49 @@ setTimeout(() => {
     halfWidth = getHalfWidth();
     animate();
 }, 100);
+
+tsParticles.load("particles-js", {
+  background: {
+    color: {
+      value: "transparent"
+    }
+  },
+  particles: {
+    number: {
+      value: 60
+    },
+    color: {
+      value: "#4f46e5"
+    },
+    links: {
+      enable: true,
+      color: "#4f46e5",
+      distance: 150,
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2
+    },
+    size: {
+      value: 3
+    }
+  },
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "grab"
+      }
+    },
+    modes: {
+      grab: {
+        distance: 200,
+        links: {
+          opacity: 0.8
+        }
+      }
+    }
+  }
+});
