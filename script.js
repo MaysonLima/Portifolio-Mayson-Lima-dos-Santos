@@ -16,7 +16,7 @@ window.open(url, '_blank');
 
 }
 
-const texto = "</MAYSON LIMA>"
+const texto = "<MAYSON LIMA>"
 const elemento = document.querySelector(".nome_mayson")
 
 let index = 0
