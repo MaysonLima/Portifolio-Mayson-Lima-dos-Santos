@@ -500,13 +500,13 @@ footer{
         font-size: 1.6rem;
     }
 
-    @media (hover: hover){
-    .tech-container:hover .tech-track{
-        animation-duration: 40s;
-    }
 }
 
 
+@media (hover: hover){
+    .tech-container:hover .tech-track{
+        animation-duration: 40s;
+    }
 }
 
 /* ===== TABLET ===== */
@@ -619,9 +619,6 @@ footer{
     animation: scroll 40s linear infinite;
 }
 
-.tech-container:hover .tech-track{
-    animation-duration: 40s;
-}
 
 .tech-track span{
     font-size: 2.5rem;
