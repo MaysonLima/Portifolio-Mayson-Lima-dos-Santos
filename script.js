@@ -30,3 +30,48 @@ function digitar(){
 }
 
 digitar()
+
+const track = document.querySelector('.tech-track');
+const container = document.querySelector('.tech-container');
+
+let position = 0;
+let speed = 0.5;
+let targetSpeed = 0.5;
+
+
+function getHalfWidth(){
+    return track.scrollWidth / 2;
+}
+
+let halfWidth = getHalfWidth();
+
+
+window.addEventListener('resize', () => {
+    halfWidth = getHalfWidth();
+});
+
+container.addEventListener('mouseenter', () => {
+    targetSpeed = 0.1;
+});
+
+container.addEventListener('mouseleave', () => {
+    targetSpeed = 0.5;
+});
+
+function animate(){
+    speed += (targetSpeed - speed) * 0.05;
+    position -= speed;
+
+    if(position <= -halfWidth){
+        position += halfWidth;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+
+    requestAnimationFrame(animate);
+}
+
+setTimeout(() => {
+    halfWidth = getHalfWidth();
+    animate();
+}, 100);
