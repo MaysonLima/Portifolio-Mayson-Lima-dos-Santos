@@ -207,6 +207,7 @@ h1{
     transition: all 0.5s ease;
     text-decoration: none;
     color: white;
+    margin-right: 15px;
 }
 
 .botao_cv:hover{
@@ -378,6 +379,10 @@ footer{
     color: var(--primary);
     transform: translateY(-4px);
     
+}
+
+.introducao_hero{
+    padding-bottom: 40px;
 }
 
 
