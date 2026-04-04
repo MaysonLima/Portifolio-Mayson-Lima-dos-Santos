@@ -19,14 +19,16 @@ const elemento = document.querySelector(".nome_mayson");
 let index = 0;
 
 function digitar(){
-    if(index < texto.length){
+    if(elemento && index < texto.length){
         elemento.textContent += texto.charAt(index);
         index++;
         setTimeout(digitar, 110);
     }
 }
 
-digitar();
+if(elemento){
+    digitar();
+}
 
 // =================== Carrossel ===================
 const track = document.querySelector('.tech-track');
@@ -40,19 +42,23 @@ function getHalfWidth(){
     return track.scrollWidth / 2;
 }
 
-let halfWidth = getHalfWidth();
+let halfWidth = track ? getHalfWidth() : 0;
 
-window.addEventListener('resize', () => {
-    halfWidth = getHalfWidth();
-});
+if(track){
+    window.addEventListener('resize', () => {
+        halfWidth = getHalfWidth();
+    });
+}
 
-container.addEventListener('mouseenter', () => {
-    targetSpeed = 0.1;
-});
+if(container){
+    container.addEventListener('mouseenter', () => {
+        targetSpeed = 0.1;
+    });
 
-container.addEventListener('mouseleave', () => {
-    targetSpeed = 0.5;
-});
+    container.addEventListener('mouseleave', () => {
+        targetSpeed = 0.5;
+    });
+}
 
 function animateCarousel(){
     speed += (targetSpeed - speed) * 0.05;
@@ -62,21 +68,27 @@ function animateCarousel(){
         position += halfWidth;
     }
 
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(animateCarousel);
+    if(track){
+        track.style.transform = `translateX(${position}px)`;
+        requestAnimationFrame(animateCarousel);
+    }
 }
 
-setTimeout(() => {
-    halfWidth = getHalfWidth();
-    animateCarousel();
-}, 100);
+if(track){
+    setTimeout(() => {
+        halfWidth = getHalfWidth();
+        animateCarousel();
+    }, 100);
+}
 
 // =================== Partículas ===================
 const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+const ctx = canvas ? canvas.getContext("2d") : null;
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+if(canvas){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
 
 let numParticles;
 function getNumParticles() {
@@ -130,7 +142,9 @@ class Particle {
 
 // Inicializa partículas
 for(let i = 0; i < numParticles; i++){
-    particles.push(new Particle());
+    if(canvas){
+        particles.push(new Particle());
+    }
 }
 
 function connectParticles(){
@@ -178,10 +192,16 @@ function animateParticles(){
     requestAnimationFrame(animateParticles);
 }
 
-animateParticles();
+if(canvas && ctx){
+    animateParticles();
+}
 
 // Redimensionamento
 window.addEventListener("resize", () => {
+    if(!canvas){
+        return;
+    }
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 

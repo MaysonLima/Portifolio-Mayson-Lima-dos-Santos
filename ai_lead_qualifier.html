@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Qualifier | Portifolio Mayson Lima</title>
+    <link rel="stylesheet" href="global_styles.css">
+</head>
+
+<body class="pagina_projeto">
+    <canvas id="particles"></canvas>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="index.html#inicio" class="menu_link">Inicio</a></li>
+            <li><a href="index.html#projetos" class="menu_link">Projetos</a></li>
+            <li><a href="index.html#contatos" class="menu_link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="projeto_main">
+        <section class="projeto_hero">
+            <div class="projeto_card_info">
+                <span class="projeto_tag">Projeto full stack com IA</span>
+                <h1 class="projeto_titulo">AI Lead Qualifier</h1>
+                <p class="projeto_resumo">
+                    O AI Lead Qualifier e um projeto de portfolio que simula um fluxo de qualificacao de leads com IA.
+                    O frontend em React envia os dados para uma API em Node.js e Express, que analisa a necessidade
+                    comercial do lead e devolve um resultado estruturado com status, score, motivo e abordagem sugerida.
+                </p>
+
+                <div class="projeto_acoes">
+                    <a href="https://github.com/MaysonLima/AI-Lead-Qualifier" class="botao_cv">Repositorio no GitHub</a>
+                    <a href="index.html#projetos" class="botao_secundario">Voltar aos projetos</a>
+                </div>
+
+                <div class="projeto_lista_destaque">
+                    <article>
+                        <h3>Fluxo completo</h3>
+                        <p>Captura os dados do lead, envia para a API e apresenta a resposta de forma clara no frontend.</p>
+                    </article>
+                    <article>
+                        <h3>Dois modos de IA</h3>
+                        <p>O backend funciona com provider mock para testes e tambem com OpenAI para simulacoes reais.</p>
+                    </article>
+                    <article>
+                        <h3>Uso pratico</h3>
+                        <p>Mostra uma aplicacao de IA voltada para triagem, qualificacao e priorizacao comercial.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="projeto_card_visual">
+                <img src="img/image_ex01.png" alt="Tela principal do projeto AI Lead Qualifier">
+            </div>
+        </section>
+
+        <section class="projeto_grade">
+            <article class="projeto_bloco">
+                <h2>Sobre o projeto</h2>
+                <p>
+                    A proposta do projeto e demonstrar um caso de uso realista de IA aplicada a vendas. A aplicacao
+                    recebe o nome da empresa e a necessidade do lead, processa esse contexto no backend e retorna um
+                    parecer pronto para leitura, ajudando a visualizar como um time comercial pode automatizar a triagem
+                    inicial de oportunidades.
+                </p>
+
+                <div class="projeto_fluxo">
+                    <article>
+                        <span>01</span>
+                        <p>O usuario preenche o nome da empresa e descreve a necessidade comercial.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <p>O frontend React envia os dados para a rota <strong>POST /qualify-lead</strong>.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <p>A API processa a qualificacao com provider mock ou com a OpenAI API.</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <p>O sistema devolve status, score, reason e suggestedApproach de forma estruturada.</p>
+                    </article>
+                </div>
+            </article>
+
+            <article class="projeto_bloco">
+                <h2>Tecnologias utilizadas</h2>
+                <p>
+                    O projeto combina backend, frontend e integracao com IA para mostrar uma arquitetura modular e
+                    pronta para evolucao. Alem da interface React, a aplicacao possui validacao de entrada, variaveis de
+                    ambiente, provider configuravel e comunicacao local entre Vite e Express.
+                </p>
+
+                <div class="stack_lista">
+                    <span class="stack_item">Node.js</span>
+                    <span class="stack_item">Express</span>
+                    <span class="stack_item">JavaScript</span>
+                    <span class="stack_item">React</span>
+                    <span class="stack_item">Vite</span>
+                    <span class="stack_item">dotenv</span>
+                    <span class="stack_item">OpenAI API</span>
+                    <span class="stack_item">REST API</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="projeto_bloco">
+            <h2>Galeria do projeto</h2>
+            <p>
+                As imagens abaixo mostram a interface principal da aplicacao, um exemplo de retorno nao qualificado e
+                um exemplo de lead qualificado com score, justificativa e sugestao de abordagem.
+            </p>
+
+            <div class="galeria_grade">
+                <figure class="galeria_item">
+                    <img src="img/image_ex01.png" alt="Tela principal do AI Lead Qualifier">
+                    <figcaption>Visao geral da interface com formulario de entrada, explicacao do fluxo e painel de resultado.</figcaption>
+                </figure>
+
+                <figure class="galeria_item">
+                    <img src="img/fail_exemple.png" alt="Exemplo de lead nao qualificado no AI Lead Qualifier">
+                    <figcaption>Exemplo de resposta com score baixo, status <strong>not qualified</strong> e sugestao de abordagem.</figcaption>
+                </figure>
+
+                <figure class="galeria_item">
+                    <img src="img/sucess_exemple.png" alt="Exemplo de lead qualificado no AI Lead Qualifier">
+                    <figcaption>Exemplo de lead com score alto, status <strong>qualified</strong> e justificativa comercial.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div>
+            <a href="https://www.linkedin.com/in/maysonlima/" target="_blank" class="img_contato"><i
+                    class="fa-brands fa-square-linkedin fa-2x"></i></a>
+            <a href="https://github.com/MaysonLima" target="_blank" class="img_contato"><i
+                    class="fa-brands fa-square-github fa-2x"></i></a>
+        </div>
+        <h2>Mayson Lima</h2>
+    </footer>
+
+    <script src="global_script.js" defer></script>
+    <script src="https://kit.fontawesome.com/f692f130e5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
